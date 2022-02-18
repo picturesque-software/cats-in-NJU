@@ -1,0 +1,86 @@
+body{
+    background-image: url(/images/20.jpg);
+    background-size: 100vw 100vh;
+}
+.box{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    /*实现块元素百分比下居中*/
+    width:450px;
+    padding:50px;
+    background: rgba(218, 212, 212, 0.8);
+    box-sizing:border-box;
+    box-shadow: 0px 15px 25px rgba(0,0,0,.5);
+    border-radius:15px;
+}
+.box h2{
+    margin:0 0 30px;
+    color: black;
+    text-align:center;
+}
+.box .inputbox{
+    position:relative;
+}
+.box .inputbox input{
+    width: 100%;
+    padding:10px 0;
+    font-size:16px;
+    color:black;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    border:none;
+    border-bottom: 1px solid black;
+    outline:none;
+    background: transparent;
+}
+.box .inputbox label{
+    position:absolute;
+    top:0px;
+    left:0px;
+    padding:10px 0;
+    font-size: 16px;
+    color:black;
+    pointer-events:none;
+    transition:.5s;
+}
+.box .inputbox input:focus ~ label,
+.box .inputbox input:valid ~ label
+{
+    top:-18px;
+    color:black;
+    font-size:14px;
+}
+.button{
+    background: transparent;
+    border:none;
+    outline:none;
+    font-size: 18px;
+    color:#fff;
+    background: black;
+    padding:15px 25px;
+    cursor: pointer;
+    border-radius:10px;
+}
+.inputCode{
+	margin-top: 5px;
+	padding: 0.5em;
+	font-size: 14px;
+	line-height: 20px;
+	width: 130px;
+	background-color: white;
+}
+.tips{
+    color: red;
+}
+.checkCodeBlock{
+    margin-left: 2em;
+    padding: 0.5em;
+	font-size: 20px;
+	line-height: 30px;
+	background-color: rgb(232, 240, 254);
+	color: purple;
+	text-align: center;
+	box-sizing: border-box;
+}

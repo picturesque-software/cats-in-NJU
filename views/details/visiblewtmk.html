@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/display.css">
+    <title>wz-hw1</title>
+</head>
+<body>
+    <ul>
+        <li><a class="logo" href="#">
+          <img src="/images/logo.jpg" alt="logo">
+        </a></li>
+        <li><a class="active" href="#">南哪儿猫社区</a></li>
+        <li><a class="button" href="#">猫猫地图</a></li>
+        <li><a class="button" href="#">猫猫分布</a></li>
+        <li><a class="button" href="#">猫猫科普</a></li>
+		<li><a class="button" href="/watermark">猫猫水印</a></li>
+        <li style="width: 59%">
+            <div class="header">
+                南哪儿的贵族猫们
+            </div>
+        </li>
+        <li style="float: right;"><a class="login">退出</a></li>  
+      </ul>
+
+    <div style="height: 3em;display: flex;overflow: hidden;"></div>
+
+    <div style="height: 5em;margin-top: 1.5em;margin-bottom: 1.5em;">
+        <div style="text-align: center;display:inline-block;width: 90%;font-size: 2em;">可见水印图像</div>
+        <div style="display: inline-block;"><a class="active" style="float: right" href="/watermark">返回</a></div>
+    </div>
+
+    <div style="justify-content: center; display: flex">
+        <img id="showWaterMark" src="/images/12.jpg" alt="picture not found">
+    </div>
+    <script>
+        (function() {
+	    function __picWM({
+	        url = '/images/12.jpg',
+	        textAlign = 'center',
+	        textBaseline = 'middle',
+	        font = "25px Microsoft Yahei ",
+	        fillStyle = 'rgba(187, 187, 187, 2)',
+	        content = '',
+	        cb = null,
+	        textX =100,
+	        textY = 15
+	    } = {}) {
+	        const img = new Image();
+	        img.src = url;
+	        img.crossOrigin = 'anonymous';
+	        img.onload = function() {
+	          const canvas = document.createElement('canvas');
+	          canvas.width = img.width;
+	          canvas.height = img.height;
+	          const ctx = canvas.getContext('2d');
+	          ctx.drawImage(img, 0, 0);
+	          ctx.textAlign = textAlign;
+	          ctx.textBaseline = textBaseline;
+	          ctx.font = font;
+	          ctx.fillStyle = fillStyle;
+	          ctx.fillText(content, img.width - textX, img.height - textY);
+	          const base64Url = canvas.toDataURL();
+	          cb && cb(base64Url);
+	        }
+	    }
+	    if (typeof module != 'undefined' && module.exports) {  //CMD
+	        module.exports = __picWM;
+	    } else if (typeof define == 'function' && define.amd) { // AMD
+	        define(function () {
+	          return __picWM;
+	        });
+	    } else {
+	        window.__picWM = __picWM;
+	      }
+	   })();
+	    // 调用
+	    __picWM({
+	        url: '/images/12.jpg',
+	        content: '@photo by wxt',
+	        cb: (base64Url) => {
+	          document.querySelector('#showWaterMark').src = base64Url
+	        },
+	      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/login.css">
+    <title>wz-hw1</title>
+</head>
+<body style="background-image: url(/images/13.jpg);background-size: 100vw 100vh;">
+    <div class="box">
+        <h2>注册</h2>
+            <div class="inputbox">
+                <input type="text" id="username">
+                <label>用户名</label>
+                <p class="tips" id="nousername" style="margin-top: 0em;" hidden=true>请输入用户名！</p>
+                <p class="tips" id="repeatusername" style="margin-top: 0em;" hidden=true>用户名已存在！</p>
+            </div>
+            <div class="inputbox">
+                <input type="password" id="password">
+                <label>密码</label>
+                <p class="tips" id="nopassword" style="margin-top: 0em;" hidden=true>请输入密码！</p>
+            </div>
+            <div class="inputbox">
+                <input type="password" id="password1">
+                <label>再次输入密码</label>
+                <p class="tips" id="nopassword1" style="margin-top: 0em;" hidden=true>请再次输入密码！</p>
+                <p class="tips" id="different" style="margin-top: 0em;" hidden=true>两次输入密码不一致！</p>
+            </div>
+            <div class="inputbox">
+                <input type="text" id="email">
+                <label>邮箱</label>
+                <p class="tips" id="noemail" style="margin-top: 0em;" hidden=true>请输入邮箱！</p>
+            </div>
+            <form action="" style="margin-top: 1em;margin-bottom: 1em;">
+                <input type="radio" name="sex" value="男">男
+                <input type="radio" name="sex" value="女">女
+                <input type="radio" name="sex" value="其他">其他
+            </form>
+            <p class="tips" id="nosex" hidden=tre>请选择性别！</p>
+            <div>                
+				<input  type="text" class="inputCode" id="inputCode"  placeholder="验证码">
+                <i style="float: right;cursor: pointer;color: purple;text-align: center;margin-top: 0.5em;" onclick="createCode()">看不清?</i>
+				<i onclick="createCode()" id="checkCode" class="checkCodeBlock" style="width: 30px;cursor: pointer"></i>
+				<p class="tips" id="noidcode" hidden=true>请输入验证码！</p>
+				<p class="tips" id="wrongidcode" hidden=true>验证码错误！</p>
+			</div>
+            <div style="margin-top: 3em;text-align: center;">
+                <button type="button" class="button" onclick="register()" style="margin-left: 1em;text-decoration: none; margin-right: 2em;">注册</button>
+                <button type="button" class="button" onclick="cancel()" style="margin-left: 1em;text-decoration: none; ">返回</button>
+            </div> 
+            <div>
+                <a href="#"><h3 style="text-align: center;margin-top: 1em;padding-top: 2em;">联系我们</h3></a>
+                <p style="text-align:center;font-style: italic;">诚邀您看猫片！!</p>
+            </div>
+    </div>
+    <script type="text/javascript" src="/javascripts/register.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/login.css">
+    <title>wz-hw1</title>
+</head>
+<body>
+    <div class="box">
+        <h2>登录</h2>
+        <form>
+            <div class="inputbox">
+                <input type="text" id="username">
+                <label>用户名</label>
+                <p class="tips" id="nousername" style="margin-top: 0" hidden=true>用户名不能为空!</p>
+            </div>
+            <div class="inputbox">
+                <input type="password" id="password">
+                <label>密码</label>
+                <p class="tips" id="nopassword" style="margin-top: 0;" hidden=true>密码不能为空!</p>
+            </div> 
+            <div>                
+				<input  type="text" class="inputCode" id="inputCode"  placeholder="验证码">
+                <i style="float: right;cursor: pointer;color: purple;text-align: center;margin-top: em;" onclick="createCode()">看不清?</i>
+				<i onclick="createCode()" id="checkCode" class="checkCodeBlock" style="width: 30px;cursor: pointer"></i>
+				<p class="tips" id="noidcode" hidden=true>请输入验证码！</p>
+				<p class="tips" id="wrongidcode" hidden=true>验证码错误！</p>
+			</div>
+            <div >
+                <a href="/forgetpsd" style="float: right;font-style: oblique;text-decoration: none;padding-top: 2em;color: rgb(54, 54, 54);">忘记密码</a>
+            </div>
+            <div style="margin-bottom: 3em;margin-top: 5em;">
+                <button type="button" class="button" onclick="login()" style="margin-left: 7.5em;text-decoration: none; ">登录</button>
+                <p class="tips" id="wrongup" hidden=true>用户名或密码错误！</p>
+            </div> 
+            
+            <div style="text-align: right;">没有账号？
+                <a href="/register" style="float: right;text-decoration: none; text-align: center;padding-right: 0%;color: purple;font-weight: 400;">点击注册!</a>
+            </div>
+            <div>
+                <a href="#">
+                    <h3 style="text-align: center;margin-top: 1em;padding-top: 1em;">联系我们</h3>
+                </a>
+                <p style="text-align:center;font-style: italic;" >诚邀您看猫片！!</p>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="/javascripts/login.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+</body>
+</html>

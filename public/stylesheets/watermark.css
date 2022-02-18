@@ -1,0 +1,138 @@
+.masonry {
+    column-count: 2;  /*one column on mobile*/
+    column-gap: 0;
+}
+@media (min-width: 400px) {
+    .masonry {
+        column-count: 3;  /*two columns on larger phones*/
+    }
+}
+@media (min-width: 600px) {
+    .masonry {
+        column-count: 4; /* three columns on...you get it*/
+    }
+}
+.item {
+    break-inside: avoid;
+    box-sizing: border-box;
+    padding: 0px;
+}
+.item img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.header {
+    width: 100%;
+    height: 3em;
+    text-align: center;
+    background: #333;
+    color: white;
+    font-size: 2em;
+    font-family:sans-serif
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;;
+    width: 100%;
+    height: 3em;
+    top: 0;
+    position: fixed;
+  }
+  
+li {
+    float: left;
+}
+  
+li .button {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li .logo{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width: 3em;
+    padding: 0;
+}
+.logo img{
+      display: inline-block;
+      height: inherit;
+      width: inherit;
+      position: relative;
+      vertical-align: middle;
+}
+li a:hover:not(.active) {
+    background-color: #111;
+}
+  
+li .active {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: purple;
+}
+li .login {
+    width: 100%;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: purple;
+  }
+
+.display{
+    margin-top: 3em;
+    width: auto;
+    height: 300px;
+    display: block;
+    text-align:center;  
+
+}
+.display img{
+    width: 591px;
+    height: 443px;
+    margin-top: 20px;
+    float: left;
+    margin-left: 20px;
+}
+.display canvas{
+    width: 591px;
+    height: 443px;
+    margin-top: 20px;
+    float: left;
+    margin-left: 20px;
+    }
+.span1{
+        width: auto;
+        height: 50px;
+        display: block;
+        background-color: rgba(255,255,255,0.05);
+        text-align:center;
+        margin-right: 20px;
+        
+    }
+
+.box{
+text-align: center;
+float:left;
+width: 160px;
+height: 50px;
+font:12px;
+color:darkturquoise;
+}
+
+

@@ -1,0 +1,82 @@
+[{
+  "_id": {
+    "$oid": "61b5b6a5482bca059bde1050"
+  },
+  "username": "qqqq",
+  "password": "$2a$10$v0LNpn0pHn163nJv540zyOuZplw7tGlJjjVvXXglIBCTcXA3Mqahu",
+  "email": "19125013@smail.nju.edu.cn",
+  "sex": "其他",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b5b6d7482bca059bde1055"
+  },
+  "username": "qqqqq",
+  "password": "$2a$10$v0LNpn0pHn163nJv540zyOuZplw7tGlJjjVvXXglIBCTcXA3Mqahu",
+  "email": "191250134@smail.nju.edu.cn",
+  "sex": "其他",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b5b77e482bca059bde1059"
+  },
+  "username": "wwww",
+  "password": "$2a$10$v0LNpn0pHn163nJv540zyOoRhRWu1iML3D2gc80cbAx2m/Yqxy1EG",
+  "email": "1598033730@qp.com",
+  "sex": "女",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b5b81f482bca059bde1062"
+  },
+  "username": "wwwww",
+  "password": "$2a$10$v0LNpn0pHn163nJv540zyO2OT8soDqLCLNM8/YDK58EZxkqM3/KBm",
+  "email": "1598033730@qq.com",
+  "sex": "男",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b5b853482bca059bde1066"
+  },
+  "username": "eeee",
+  "password": "$2a$10$v0LNpn0pHn163nJv540zyOLPV.oCXsE1cs9TXj1UuSsNKbKZfZgJe",
+  "email": "17793200801@xx.com",
+  "sex": "男",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b5b9100b0fb7e568521af7"
+  },
+  "username": "rrrr",
+  "password": "$2a$10$XRuhOGfNea2Ie18vADp16OUJODrVwPDFp7U6Lz42kfhHqu/HlGbMu",
+  "email": "1598033730@ww.com",
+  "sex": "男",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b5cae9e4e9d7b85b6c4724"
+  },
+  "username": "wxt",
+  "password": "$2a$10$umj086kL/Q2bPO37PbY9d.ZMAajt8C.86tDYIB5HBFU682SumCYyq",
+  "email": "191250134@smail.nju.edu.cr",
+  "sex": "女",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b5ccbf4e14d0127d7969a1"
+  },
+  "username": "wzshabi",
+  "password": "$2a$10$xUT0z26fXmXbm1J0ayCLae7axQh3f5yDvCvC499kCyyVNhkmpazYS",
+  "email": "13952326277@qq.com",
+  "sex": "女",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61b615ccbf21e614d06e7dfb"
+  },
+  "username": "yyyy",
+  "password": "$2a$10$D1Gcl8dLTBk0J9TedJIDqONzAmxJTb9oQRxCg1pg9ZfHc6YoA.9L2",
+  "email": "17793200801@ee.com",
+  "sex": "其他",
+  "__v": 0
+}]

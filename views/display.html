@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/display.css">
+    <title>wz-hw1</title>
+</head>
+<body>
+    <ul>
+        <li><a class="logo" href="#">
+          <img src="/images/logo.jpg" alt="logo">
+        </a></li>
+        <li><a class="active" href="#">南哪儿猫社区</a></li>
+        <li><a class="button" href="#">猫猫地图</a></li>
+        <li><a class="button" href="#">猫猫分布</a></li>
+        <li><a class="button" href="#">猫猫科普</a></li>
+        <li><a class="button" href="/watermark">猫猫水印</a></li>
+        <li><a class="button" href="/transfer">猫猫风格迁移</a></li>
+        <li style="width: 57%">
+            <div class="header">
+                南哪儿的贵族猫们
+            </div>
+        </li>
+        <li style="float: right; cursor: pointer;"><a class="login" onclick="logout()">退出</a></li>  
+      </ul>
+
+    <div style="height: 3em;display: flex;overflow: hidden;"></div>
+
+    <div style="height: 5em;margin-top: 1.5em;margin-bottom: 1.5em;">
+        <div style="text-align: center;display:inline-block;width: 90%;font-size: 2em;color: rgb(187, 28, 187);">图片-详情</div>
+        <div style="display: inline-block;"><a class="active" style="float: right;font-family: Arial, Helvetica, sans-serif;border-radius: 10px" href="/index">返回</a></div>
+    </div>
+    
+    <div style="margin-left: 3em;">
+        <label style="font-size: 1.2em;" for="filter-changer">请为猫猫选择合适的滤镜！</label>
+    <select id="filter-changer">
+    <option value="none">None</option>
+    <option value="red">Red</option>
+    <option value="green">green</option>
+    <option value="blue">blue</option>
+    <option value="gaussian">Gaussian</option>
+    <option value="grayscale">Grayscale</option>
+    <option value="invert">invert</option>
+    <option value="laplacian">laplacian</option>
+    <option value="prewittHorizontal">Prewitt Horizontal</option>
+    <option value="prewittVertical">Prewitt Vertical</option>
+    <option value="roberts">roberts</option>
+    <option value="saturation">saturation</option>
+    <option value="sepia">sepia</option>
+    <option value="sharpen">sharpen</option>
+    <option value="sobelHorizontal">sobel Horizontal</option>
+    <option value="sobelVertical">sobel Vertical</option>
+
+    </select>
+    <br>
+    </div>
+    <div style="margin-top: 2em;margin-left: 3em;">
+        <a class="active" style="float: left;font-family: Arial, Helvetica, sans-serif;border-radius: 10px" href="/caman">更多滤镜与调节</a>
+        <a class="active" style="float: left;margin-left: 2em; font-family: Arial, Helvetica, sans-serif;border-radius: 10px" href="/cropper">裁剪与旋转</a>
+    </div>
+    
+
+    <div style="justify-content: center; display: flex;margin-top: 10em;">
+        <img id="original-image" src="" alt="picture not found">
+        <canvas style="margin-left: 10em;" id="filtered-image"></canvas>
+    </div>
+    
+    <div style="justify-content: center; display: flex;margin-top: 40em;">
+        
+    </div>
+    <script type="text/javascript" src="/javascripts/index.js"></script>
+    <script src="javascripts/lena.min.js"></script>
+    <script src="javascripts/display.js">
+    </script>
+</body>
+</html>

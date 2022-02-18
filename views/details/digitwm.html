@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/display.css">
+    <title>wz-hw1</title>
+</head>
+<body>
+    <ul>
+        <li><a class="logo" href="#">
+          <img src="/images/logo.jpg" alt="logo">
+        </a></li>
+        <li><a class="active" href="#">南哪儿猫社区</a></li>
+        <li><a class="button" href="#">猫猫地图</a></li>
+        <li><a class="button" href="#">猫猫分布</a></li>
+        <li><a class="button" href="#">猫猫科普</a></li>
+        <li><a class="button" href="/watermark">猫猫水印</a></li>
+        <li style="width: 59%">
+            <div class="header">
+                南哪儿的贵族猫们
+            </div>
+        </li>
+        <li style="float: right;"><a class="login" >退出</a></li>  
+      </ul>
+
+    <div style="height: 3em;display: flex;overflow: hidden;"></div>
+
+    <div style="height: 5em;margin-top: 1.5em;margin-bottom: 1.5em;">
+        <div style="text-align: center;display:inline-block;width: 90%;font-size: 2em;">数字水印解码结果</div>
+        <div style="display: inline-block;"><a class="active" style="float: right" href="/watermark">返回</a></div>
+    </div>
+
+    <div style="justify-content: center; display: flex">
+        <canvas id="digitcv" width="591" height="443">
+			
+		</canvas>
+    </div>
+    <script>
+        var processData = function (ctx, originalData) {
+            var data = originalData.data;
+            for (var i = 0; i < data.length; i++) {
+                if (i % 4 == 0) {
+                    // R分量
+                    if (data[i] % 2 == 0) {
+                        data[i] = 0;
+                    } else {
+                        data[i] = 255;
+                    }
+                } else if (i % 4 == 3) {
+                    // alpha通道不做处理
+                    continue;
+                } else {
+                    // 关闭其他分量，不关闭也不影响答案
+                    data[i] = 0;
+                }
+            }
+            // 将结果绘制到画布
+            ctx.putImageData(originalData, 0, 0);
+        }
+        function decodeImg(src) {
+            var ctx = document.getElementById('digitcv').getContext('2d');
+            var img = new Image();
+            var originalData;
+            img.onload = function () {
+                // 获取指定区域的canvas像素信息
+                ctx.drawImage(img, 0, 0,591,443);
+                originalData = ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height);
+                console.log(originalData)
+                processData(ctx, originalData)
+            };
+            img.src = src;
+        }
+        decodeImg('/images/12-digit.png');
+    </script>
+</body>
+</html>
